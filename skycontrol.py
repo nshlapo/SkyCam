@@ -16,21 +16,25 @@ class SkyController:
         self.model = model
 
     def handle_key_event(self, event):
-        if event.type is not KEYDOWN:
+        if event.type != KEYDOWN:
             return
-        if event.key is pygame.K_LEFT:
+        if event.key == pygame.K_LEFT:
+            print "LEFT"
             self.model.camera.update(theta)
             for node in self.model.node:
                 node.update_wire(pi)
-        if event.key is pygame.K_RIGHT:
+        if event.key == pygame.K_RIGHT:
+            print "RIGHT"
             self.model.camera.update(theta)
             for node in self.model.node:
                 node.update_wire(0)
-        if event.key is pygame.K_UP:
+        if event.key == pygame.K_UP:
+            print "UP"
             self.model.camera.update(theta)
             for node in self.model.node:
                 node.update_wire(pi/2)
-        if event.key is pygame.K_DOWN:
+        if event.key == pygame.K_DOWN:
+            print "DOWN"
             self.model.camera.update(theta)
             for node in self.model.node:
                 node.update_wire(3*pi/2)
