@@ -20,21 +20,21 @@ class SkyController:
             return
         if event.key == pygame.K_LEFT:
             print "LEFT"
-            self.model.camera.update(theta)
-            for node in self.model.node:
+            # self.model.camera.update(theta)
+            for node in self.model.nodes:
                 node.update_wire(pi)
         if event.key == pygame.K_RIGHT:
             print "RIGHT"
-            self.model.camera.update(theta)
-            for node in self.model.node:
+            # self.model.camera.update(theta)
+            for node in self.model.nodes:
                 node.update_wire(0)
         if event.key == pygame.K_UP:
             print "UP"
-            self.model.camera.update(theta)
-            for node in self.model.node:
+            # self.model.camera.update(theta)
+            for node in self.model.nodes:
                 node.update_wire(pi/2)
         if event.key == pygame.K_DOWN:
             print "DOWN"
-            self.model.camera.update(theta)
-            for node in self.model.node:
+            # self.model.camera.update(theta)
+            for node in self.model.nodes:
                 node.update_wire(3*pi/2)
