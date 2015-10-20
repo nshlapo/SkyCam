@@ -14,4 +14,6 @@ class GameView:
 
     def draw(self):
         self.screen.fill(pygame.Color(0,0,0))
+
+
         pygame.display.update()
