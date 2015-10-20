@@ -14,6 +14,8 @@ class GameView:
 
     def draw(self):
         self.screen.fill(pygame.Color(0,0,0))
-
+        self.model.camera.draw(self.screen)
+        for node in self.model.nodes:
+            node.draw(self.screen)
 
         pygame.display.update()

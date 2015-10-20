@@ -26,9 +26,9 @@ def move(theta, Camera):
         Camera.x = dldp(Camera.x, module.x, theta)
         Camera.y = dldp(Camera.y, module.y, theta)
 
-def dldp(loc, ref, theta):
-    deltaX = loc[0] - ref[0]
-    deltaY = loc[1] - ref[1]
+def dldp(cameraPos, nodePos, theta):
+    deltaX = cameraPos[0] - nodePos[0]
+    deltaY = cameraPos[1] - nodePos[1]
     numer = deltaX*cos(theta) + deltaY*sin(theta)
     denom = (deltaX**2 + deltaY**2)**.5
     return numer/denom
