@@ -2,9 +2,9 @@ from __future__ import division
 from math import sin, asin, cos, acos, pi
 
 class Camera:
-    def __init__(self, *Modules):
-        self.x = 0
-        self.y = 0
+    def __init__(self):
+        self.x = 2
+        self.y = 2
 
 
 class Node:
@@ -14,9 +14,9 @@ class Node:
         self.wire = distance((Camera.x,Camera.y), (self.x, self.y))=
         self.master = master
 
-NewCamera = Camera()
-Module1 = Module(0,0)
-Module2 = Module(10,3)
+newCamera = Camera()
+module1 = Module(0,0, newCamera)
+module2 = Module(10,3)
 
 def wireVals(Camera, *Modules):
     Camera.x
