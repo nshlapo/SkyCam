@@ -10,7 +10,7 @@ import time
 if __name__ == '__main__':
     pygame.init()
 
-    size = (1000, 1000)
+    size = (1000, 400)
     screen = pygame.display.set_mode(size)
     model = SkyModel()
     view = SkyView(model,screen)
